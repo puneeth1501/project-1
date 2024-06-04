@@ -1,4 +1,4 @@
- body {
+  body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
@@ -151,7 +151,6 @@ nav ul li a:hover {
     height: 100%;
     z-index: 1;
 }
-
 .section div {
     position: absolute;
     top: 80%;
@@ -232,3 +231,52 @@ nav ul li a:hover {
 .contact-button:hover {
     background-color: #444;
 }
+.materials.section .material {
+    position: absolute;
+    top: 80%;
+    right: 10%;
+    transform: translateY(-50%);
+    width: auto;
+    max-width: 40%;
+    padding: -10px;
+    border-radius: 10px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.materials.section .material h1 {
+    color: #f0f0f0;
+    font-size: 1.5em;
+    margin-bottom: 25px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-align: left;
+    width: 100%;
+}
+
+.learn-more1 {
+    display: inline-block;
+    background-color: black;
+    color: white;
+    padding: 12px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    outline: none;
+    width: auto;
+    max-width: 200px;
+    margin-top: 10px;  
+    align-self: flex-start;  
+}
+
+.learn-more1:hover {
+    background-color: #333;
+}
+
