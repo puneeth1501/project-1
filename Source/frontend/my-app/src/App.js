@@ -6,6 +6,7 @@ import ShopPage from './Pages/ShopPage';
 import ThreeDPrintingPage from './Pages/3DPrintingPage';
 import Bookings from './Pages/Bookings';
 
+import MaterialsPage from './Pages/MaterialsPage';
 import './App.css';
 
 function App() {
@@ -17,6 +18,8 @@ function App() {
         <Route path="/booking" element={<Bookings/>} />
         <Route path="/shop" element={<ShopPage />} />
         <Route path="/3d-printing" element={<ThreeDPrintingPage />} />
+        <Route path="/materialsPage" element={<MaterialsPage />} />
+
      
       </Routes>
     </Router>
