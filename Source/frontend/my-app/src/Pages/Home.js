@@ -82,7 +82,7 @@ const Home = () => {
                     <div className="material">
                         <h1>Materials we Use</h1>
                         <Link to="/materialsPage">
-                            <button className="learn-more">Learn More</button>
+                            <button className="learn-more2">Learn More</button>
                         </Link>    
                     </div>
                 </section>

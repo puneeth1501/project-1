@@ -170,13 +170,31 @@ nav ul li a:hover {
     display: inline-block;
     background-color: black;
     color: white;
-    padding: 10px 20px;
+    padding: 5px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 1em;
     margin-top: 10px;
     transition: background-color 0.3s;
+}
+
+.learn-more2 {
+    padding-top: 10%;
+    display: inline-block;
+    background-color: black;
+    color: white;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.learn-more2:hover {
+    background-color: #444;
 }
 
 .learn-more:hover {
