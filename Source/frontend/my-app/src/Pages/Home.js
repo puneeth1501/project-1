@@ -75,17 +75,16 @@ const Home = () => {
                 <section className="working style">
                     <img src={workingStyle} alt="WorkingStyle" className="workingstyle-image" />
                 </section>
-
                 <section className="materials section">
-                    <img src={wallpaper12} alt="3D Printing Image" className="materials-image" />
-                    <div className="overlay"></div>
-                    <div className="material">
-                        <h1>Materials we Use</h1>
-                        <Link to="/materialsPage">
-                            <button className="learn-more2">Learn More</button>
-                        </Link>    
-                    </div>
-                </section>
+    <img src={wallpaper12} alt="3D Printing Image" className="materials-image" />
+    <div className="overlay"></div>
+    <div className="material">
+        <h1>Materials we Use</h1>
+        <Link to="/materialsPage">
+            <button className="learn-more1">Learn More</button>
+        </Link>    
+    </div>
+</section>
                 <section className="shop section">
                     <img src={get30} alt="3D Printing Image" className="shop-image" />
                     <div className="overlay"></div>
@@ -110,4 +109,7 @@ const Home = () => {
 };
 
 export default Home;
+
+
+
 
