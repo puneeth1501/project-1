@@ -3,7 +3,6 @@ const sgMail = require('@sendgrid/mail');
 require('dotenv').config();
 
 process.env.MONGODB_URI = 'mongodb+srv://kaspearavindkumar1999:Knu5ndit%407@cluster0.jioycta.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
-process.env.SENDGRID_API_KEY = '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';
 process.env.EMAIL_USER = 'kaspearavindkumar1999@gmail.com';
 process.env.EMAIL_TO = 'aravindkaspe1991@gmail.com';
 

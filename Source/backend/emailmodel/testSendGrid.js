@@ -1,7 +1,6 @@
 require('dotenv').config();
 const sgMail = require('@sendgrid/mail');
 
-process.env.SENDGRID_API_KEY = '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';
 process.env.EMAIL_USER = '_dmarc.gmail.com';
 process.env.EMAIL_TO = 'aravindkaspe1991@gmail.com';
 
