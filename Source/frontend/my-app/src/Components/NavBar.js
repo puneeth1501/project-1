@@ -23,3 +23,4 @@ const NavBar = ({ openModal }) => {
 };
 
 export default NavBar;
+
