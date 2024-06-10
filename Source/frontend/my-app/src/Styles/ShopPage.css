@@ -146,3 +146,14 @@
 .product-card:hover button {
     opacity: 1;
 }
+
+/* ShopPage.css */
+.sidebar .filter-option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.sidebar .filter-option input[type="checkbox"] {
+    margin-right: 10px;
+}
