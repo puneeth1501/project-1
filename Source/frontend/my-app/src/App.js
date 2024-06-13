@@ -35,6 +35,7 @@ import ContactPage from './Pages/ContactPage';
 import ThreeDPrintingPage from './Pages/3DPrintingPage';
 import MaterialsPage from './Pages/MaterialsPage';
 import LoginForm from './Components/LoginPage';
+import CartPage from './Pages/CartPage';
 import './App.css';
 
 function App() {
@@ -58,6 +59,7 @@ const AppRoutes = () => {
             <Route path="/login" element={<LoginForm />} />
             <Route path="/shop" element={isAuthenticated ? <ShopPage /> : <Navigate to="/login" />} />
             <Route path="/3d-printing" element={isAuthenticated ? <ThreeDPrintingPage /> : <Navigate to="/login" />} />
+            <Route path="/cartPage" element={<LoginForm />} />
             <Route path="/materialsPage" element={isAuthenticated ? <MaterialsPage /> : <Navigate to="/login" />} />
         </Routes>
     );
