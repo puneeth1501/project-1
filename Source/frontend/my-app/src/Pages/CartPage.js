@@ -1,55 +1,90 @@
+// // CartPage.js
+// import React from 'react';
+// import { Button } from '@mui/material';
+// import '../Styles/CartPage.css';
+
+// const CartPage = ({ cart, handleCheckout, removeFromCart, decrementQuantity, addToCart }) => {
+//     const totalPrice = cart.reduce((total, item) => total + item.price * item.quantity, 0);
+
+//     return (
+//         <div className="cart-page">
+//             <h2>Cart</h2>
+//             {cart.length === 0 ? (
+//                 <p>Your cart is empty.</p>
+//             ) : (
+//                 <div>
+//                     {cart.map((item) => (
+//                         <div key={item.id} className="cart-item">
+//                             <img src={item.image} alt={item.name} className="cart-item-image" />
+//                             <div className="cart-item-details">
+//                                 <h3>{item.name}</h3>
+//                                 <p>${item.price}</p>
+//                                 <div className="quantity-controls">
+//                                     <button onClick={() => decrementQuantity(item.id)}>-</button>
+//                                     <span>{item.quantity}</span>
+//                                     <button onClick={() => addToCart(item)}>+</button>
+//                                 </div>
+//                                 <button className="remove-button" onClick={() => removeFromCart(item.id)}>
+//                                     Remove
+//                                 </button>
+//                             </div>
+//                         </div>
+//                     ))}
+//                     <div className="cart-total">
+//                         <p>Total: ${totalPrice.toFixed(2)} USD</p>
+//                         <Button variant="contained" color="primary" onClick={handleCheckout}>
+//                             Checkout
+//                         </Button>
+//                     </div>
+//                 </div>  
+//             )}
+//         </div>
+//     );
+// };
+
+// export default CartPage;
+
 // CartPage.js
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import { Button } from '@mui/material';
 import '../Styles/CartPage.css';
 
-const CartPage = ({ cart, removeFromCart }) => {
-    const [showPaymentSuccess, setShowPaymentSuccess] = useState(false);
-
-    useEffect(() => {
-        if (showPaymentSuccess) {
-            const timer = setTimeout(() => {
-                setShowPaymentSuccess(false);
-            }, 1000);
-
-            return () => clearTimeout(timer);
-        }
-    }, [showPaymentSuccess]);
-
-    const handlePayment = () => {
-        setShowPaymentSuccess(true);
-        // Perform payment logic here
-    };
+const CartPage = ({ cart, handleCheckout, removeFromCart, decrementQuantity, addToCart, onBackToShop }) => {
+    const totalPrice = cart.reduce((total, item) => total + item.price * item.quantity, 0);
 
     return (
         <div className="cart-page">
             <h2>Cart</h2>
             {cart.length === 0 ? (
-                <p>Your cart is empty</p>
+                <p>Your cart is empty.</p>
             ) : (
                 <div>
-                    <ul>
-                        {cart.map(item => (
-                            <li key={item.id}>
-                                <div>
-                                    <img src={item.image} alt={item.name} />
-                                    <span>{item.name}</span>
-                                    <span>Quantity: {item.quantity}</span>
-                                    <span>Price: ${item.price * item.quantity}</span>
+                    {cart.map((item) => (
+                        <div key={item.id} className="cart-item">
+                            <img src={item.image} alt={item.name} className="cart-item-image" />
+                            <div className="cart-item-details">
+                                <h3>{item.name}</h3>
+                                <p>${item.price}</p>
+                                <div className="quantity-controls">
+                                    <button onClick={() => decrementQuantity(item.id)}>-</button>
+                                    <span>{item.quantity}</span>
+                                    <button onClick={() => addToCart(item)}>+</button>
                                 </div>
-                                <button onClick={() => removeFromCart(item)}>Remove</button>
-                            </li>
-                        ))}
-                    </ul>
-                    <div className="payment-section">
-                        <button onClick={handlePayment}>Proceed to Payment</button>
-                        {showPaymentSuccess && <p>Payment Successful!</p>}
+                                <button className="remove-button" onClick={() => removeFromCart(item.id)}>
+                                    Remove
+                                </button>
+                            </div>
+                        </div>
+                    ))}
+                    <div className="cart-total">
+                        <p>Total: ${totalPrice.toFixed(2)} USD</p>
+                        <Button variant="contained" color="primary" onClick={handleCheckout}>
+                            Checkout
+                        </Button>
+                        <Button variant="contained" color="secondary" onClick={onBackToShop}>Back to Home</Button>
                     </div>
-                </div>
+                </div>  
             )}
-            <Link to="/">
-                <button>Continue Shopping</button>
-            </Link>
         </div>
     );
 };
